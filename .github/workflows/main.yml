@@ -1,0 +1,12 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kích hoạt màu ANSI
+        run: echo "FORCE_COLOR=1" >> $GITHUB_ENV
+
+      - name: Hiển thị thông báo Bot với màu
+        run: |
+          echo -e "\033[32m✅ [BOT]: Tỷ lệ thua cao hơn!\033[0m"
+          echo -e "\033[91m⚠️ Cảnh báo: Kiểm tra lại chiến thuật!\033[0m"
+          
